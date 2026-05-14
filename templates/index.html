@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center py-20">
+    <h1 class="text-7xl font-bold neon-text bg-gradient-to-r from-purple-500 via-pink-500 to-violet-500 bg-clip-text text-transparent mb-4">
+        ANGST SHARE
+    </h1>
+    <p class="text-xl text-zinc-400 mb-12">Deel bestanden met angstwekkende eenvoud</p>
+    
+    <div id="dropzone" class="border-4 border-dashed border-purple-500 rounded-3xl p-16 hover:border-pink-500 transition-all cursor-pointer">
+        <input type="file" id="fileInput" class="hidden" />
+        <div class="space-y-4">
+            <div class="text-6xl">📤</div>
+            <p class="text-lg">Sleep bestand hierheen of klik om te selecteren</p>
+            <button onclick="document.getElementById('fileInput').click()" 
+                    class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-10 py-4 rounded-2xl text-lg font-medium transition">
+                Kies bestand
+            </button>
+        </div>
+    </div>
+    
+    <div id="result" class="mt-10"></div>
+</div>
+
+<script src="/static/js/main.js"></script>
+{% endblock %}
